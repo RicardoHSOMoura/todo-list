@@ -1,15 +1,15 @@
 /* var todos = [
   {
     name:"Aprender HTML, CSS e Javascript",
-    active: false
+    done: false
   }, 
   {
     name: "Aprender o básico de Vue JS",
-    active: false
+    done: false
   }, 
   {
     name: "Completar o desafio de Vue JS com excelência",
-    active: false
+    done: false
   }
 ] */
 
@@ -19,7 +19,7 @@ const TodoList = {
       //todos: window.todos,
       todos: [{
         name: null,
-        active: false
+        done: false
       }],
       newTodo: {}
 
@@ -29,7 +29,12 @@ const TodoList = {
     addTodo() {
       if (this.newTodo.name) {
         this.todos.push(this.newTodo)
-        this.newTodo = {}
+        this.newTodo = {
+          done: false
+        }
+        localStorage.setItem("todos", JSON.stringify(this.todos))
+      } else {
+        alert("O campo não pode estar vazio!")
       }
     },
     // clearList() {

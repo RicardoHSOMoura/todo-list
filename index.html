@@ -24,8 +24,8 @@
                     <div 
                         v-for="todo in todos" 
                         class="single-todo" 
-                        @click="todo.active = !todo.active" 
-                        :class="{done : todo.active}"
+                        @click="todo.done = !todo.done" 
+                        :class="{done : todo.done}"
                     >
                         <p>{{todo.name}}</p>
 
