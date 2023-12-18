@@ -32,9 +32,9 @@ const TodoList = {
         this.newTodo = {}
       }
     },
-    clearList() {
-      this.todos = []
-    }
+    // clearList() {
+    //   this.todos = []
+    // }
   }
 };
 

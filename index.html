@@ -32,18 +32,18 @@
                     </div>
                 </div>
 
-                <button class="clear" @click="clearList()">Limpar tudo</button>
+                <button class="clear" @click="todos=[]" v-if="todos.length">Limpar tudo</button>
 
                 <input type="text" placeholder="Escreva uma nova tarefa..." v-model="newTodo.name">
                 <button class="add" @click="addTodo()">Adicionar</button>
 
                 <div class="instructions">
-                    Instruções:
+                    <!-- Instruções:
                     <ul>
                         <li>Clique no texto da tarefa para alternar entre feita / não feita</li>
                         <li>Use o botão limpar tudo para remover todas as tarefas</li>
                         <li>Use o input para adicionar novas tarefas</li>
-                    </ul>
+                    </ul> -->
                 </div>
             </section>
 
