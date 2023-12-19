@@ -1,18 +1,3 @@
-/* var todos = [
-  {
-    name:"Aprender HTML, CSS e Javascript",
-    done: false
-  }, 
-  {
-    name: "Aprender o básico de Vue JS",
-    done: false
-  }, 
-  {
-    name: "Completar o desafio de Vue JS com excelência",
-    done: false
-  }
-] */
-
 const TodoList = {
   data() {
     return {
@@ -38,9 +23,7 @@ const TodoList = {
       }
     },
     created() {
-      this.todos = localStorage.getItem("todos") 
-      ? JSON.parse(localStorage.getItem("todos")) 
-      : this.todos;
+      this.todos = localStorage.getItem("todos") ? JSON.parse(localStorage.getItem("todos")) : this.todos;
     },
     updated() {
       localStorage.setItem("todos", JSON.stringify(this.todos))
